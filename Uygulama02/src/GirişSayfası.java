@@ -61,8 +61,16 @@ public class GirişSayfası implements ActionListener {
             if (kullanicAdi.isEmpty() || sifre.isEmpty()){
                 JOptionPane.showMessageDialog(null,"Lütfen tüm alanları doldurun","Hata",JOptionPane.ERROR_MESSAGE);
             }
-            if (sifre.length() < 5 ){
+            else if (sifre.length() < 5 ){
                 JOptionPane.showMessageDialog(null,"Minimun 5 karalter olmalı","Hata",JOptionPane.ERROR_MESSAGE);
+
+            }
+            else if (kullanicAdi.equals("Mehmet Ali Gül") && sifre.equals("26229")){
+                JOptionPane.showMessageDialog(null,"Giriş Başarılı","Başarılı",JOptionPane.INFORMATION_MESSAGE);
+
+            }
+            else {
+                JOptionPane.showMessageDialog(null,"Kullanıcı veya Şifre hatalı!","Hata",JOptionPane.ERROR_MESSAGE);
 
             }
         }
